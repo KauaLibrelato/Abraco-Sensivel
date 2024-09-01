@@ -11,14 +11,12 @@ export const Hero = () => {
         <div className="flex max-w-[600px] flex-col gap-6">
           <h1>O que somos?</h1>
           <p className="p1 text-gray-900">
-            Clínica Abraço Sensível - Clínica Especializada LTDA é uma clínica
-            dedicada ao atendimento de indivíduos com Transtorno do Espectro
-            Autista (TEA), oferecendo diagnósticos, psicoterapia e uma seleção
-            cuidadosa de produtos sensoriais. Nosso compromisso inclui valores
-            de inclusão, empatia e responsabilidade social, proporcionando um
-            ambiente acolhedor e integrado para pacientes e suas famílias.
-            Estamos localizados no Bairro Santa Bárbara, em Criciúma, e buscamos
-            sensibilizar a comunidade sobre o TEA.
+            Uma clínica especializada no atendimento de indivíduos com
+            Transtorno do Espectro Autista (TEA), complementada pela venda de
+            produtos sensoriais cuidadosamente selecionados, destinados a
+            auxiliar na melhoria da qualidade de vida de pessoas com o espectro.
+            Contamos com valores como a inclusão, empatia, responsabilidade
+            social e respeito.
           </p>
         </div>
 

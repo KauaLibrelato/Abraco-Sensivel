@@ -11,12 +11,9 @@ export const Mission = () => {
           <h2 className="text-white">Missão</h2>
 
           <p className="p2 text-center font-semibold text-white">
-            Nossa missão é criar um ambiente acolhedor e especializado,
-            promovendo o desenvolvimento pessoal, autonomia e qualidade de vida
-            dos nossos pacientes. Valorizamos a individualidade de cada pessoa
-            com o espectro autista, capacitando-os a explorar o mundo de forma
-            segura. Além disso, buscamos educar a comunidade sobre as
-            seletividades dessas pessoas, promovendo a inclusão.
+            Oferecer um ambiente acolhedor com serviços clínicos especializados,
+            promovendo o desenvolvimento pessoal e a inclusão de pessoas que
+            possuem o TEA.
           </p>
         </Fade>
       </div>
