@@ -1,5 +1,3 @@
-import { img } from "@/assets/img";
-
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
