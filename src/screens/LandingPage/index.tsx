@@ -4,17 +4,17 @@ import { Hero } from "./components/hero";
 import { Nav } from "./components/nav";
 import { Mission } from "./components/mission";
 import { Vision } from "./components/vision";
-import { TestsAndDevices } from "./components/testsAndDevices";
+import { Products } from "./components/products";
 
 export const LandingPage = () => {
   return (
     <div className="bg-white">
-      <Nav />
       <main className="flex flex-col overflow-hidden">
+        <Nav />
         <Hero />;
         <Mission />
         <Vision />
-        <TestsAndDevices />
+        <Products />
         <Values />
       </main>
       <Footer />

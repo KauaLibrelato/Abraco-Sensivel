@@ -84,12 +84,14 @@ export const Nav = () => {
           <ul className="flex items-center gap-6 font-semibold">
             {navLinks.map(({ name, url, inView }) => (
               <li
-                className={`transition hover:text-[#7ed957] ${inView && "text-[#7ed957]"} `}
+                className={`transition hover:text-[#7ed957] ${inView && "text-[#7ed957]"}`}
               >
                 <a href={url}>{name}</a>
 
                 <div
-                  className={`h-[2px] transition-[width] ${!inView ? "w-0" : "w-full"} bg-[#7ed957]`}
+                  className={`h-[2px] transition-[width] ${
+                    !inView ? "w-0" : "w-full"
+                  } bg-[#7ed957]`}
                 />
               </li>
             ))}

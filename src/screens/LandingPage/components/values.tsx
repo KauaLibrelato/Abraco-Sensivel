@@ -39,6 +39,12 @@ export const Values = () => {
         "Cultivamos uma cultura que valoriza e integra pessoas com TEA na sociedade.",
       img: img.persons,
     },
+    {
+      title: "Precisão nos diagnósticos",
+      description:
+        "Contamos com uma equipe de profissionais altamente qualificados para garantir diagnósticos precisos e tratamentos eficazes.",
+        img: img.diagnostics,
+    },
   ];
 
   function indexIsEven(index: number) {

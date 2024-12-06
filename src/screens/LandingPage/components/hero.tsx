@@ -11,12 +11,12 @@ export const Hero = () => {
         <div className="flex max-w-[600px] flex-col gap-6">
           <h1>O que somos?</h1>
           <p className="p1 text-gray-900">
-            Uma clínica especializada no atendimento de indivíduos com
-            Transtorno do Espectro Autista (TEA), complementada pela venda de
-            produtos sensoriais cuidadosamente selecionados, destinados a
-            auxiliar na melhoria da qualidade de vida de pessoas com o espectro.
-            Contamos com valores como a inclusão, empatia, responsabilidade
-            social e respeito.
+            Um centro de desenvolvimento especializado no atendimento de
+            indivíduos com Transtorno do Espectro Autista (TEA), complementada
+            pela venda de produtos sensoriais cuidadosamente selecionados,
+            destinados a auxiliar na melhoria da qualidade de vida de pessoas
+            com o espectro. Contamos com valores como a inclusão, empatia,
+            responsabilidade social e respeito.
           </p>
         </div>
 

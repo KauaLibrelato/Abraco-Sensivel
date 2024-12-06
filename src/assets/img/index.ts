@@ -5,6 +5,7 @@ import welcome from "./welcome.svg";
 import education from "./education.svg";
 import persons from "./persons.svg";
 import quality from "./quality.svg";
+import diagnostics from "./diagnostics.svg";
 
 export const img = {
   hero,
@@ -14,4 +15,5 @@ export const img = {
   education,
   persons,
   quality,
+  diagnostics,
 };
