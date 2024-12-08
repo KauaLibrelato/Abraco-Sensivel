@@ -6,6 +6,7 @@ import education from "./education.svg";
 import persons from "./persons.svg";
 import quality from "./quality.svg";
 import diagnostics from "./diagnostics.svg";
+import abraco from "./abraco.png";
 
 export const img = {
   hero,
@@ -16,4 +17,5 @@ export const img = {
   persons,
   quality,
   diagnostics,
+  abraco,
 };

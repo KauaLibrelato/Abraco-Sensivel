@@ -1,6 +1,5 @@
+import "./nav.css";
 import * as React from "react";
-import { cn } from "@/lib/utils";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -19,18 +18,9 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className,
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+        <a ref={ref} className={`list-item ${className}`} {...props}>
+          <div className="list-title">{title}</div>
+          <p className="list-description">{children}</p>
         </a>
       </NavigationMenuLink>
     </li>
@@ -40,58 +30,36 @@ ListItem.displayName = "ListItem";
 
 export const Nav = () => {
   const { scrollY } = useScroll();
-
-  console.log(scrollY);
-
   const navLinks = [
+    { name: "Sobre nós", url: "#hero", inView: scrollY <= 500 },
+    { name: "Missão", url: "#mission", inView: scrollY > 500 && scrollY < 800 },
+    { name: "Visão", url: "#vision", inView: scrollY >= 800 && scrollY < 1300 },
     {
-      name: "Sobre nós",
-      url: "#hero",
-      inView: scrollY <= 500,
-    },
-    {
-      name: "Missão",
-      url: "#mission",
-      inView: scrollY > 500 && scrollY < 800,
-    },
-    {
-      name: "Visão",
-      url: "#vision",
-      inView: scrollY >= 800 && scrollY < 1300,
-    },
-    {
-      name: "Testes e Dispositivos",
-      url: "#testsAndDevices",
+      name: "Produtos",
+      url: "#products",
       inView: scrollY >= 1300 && scrollY < 1800,
     },
     {
-      name: "Valores",
-      url: "#values",
-      inView: scrollY >= 1800,
+      name: "Serviços",
+      url: "#services",
+      inView: scrollY >= 1300 && scrollY < 1800,
     },
+    { name: "Valores", url: "#values", inView: scrollY >= 1800 },
   ];
 
   return (
-    <header
-      className={`sticky top-0 z-10 rounded-b-md bg-white transition ${scrollY > 1 && "shadow-lg"} `}
-    >
-      <div
-        x-init={true}
-        className="mx-auto hidden max-w-6xl items-center justify-between p-4 md:flex"
-      >
-        <nav className="flex items-center gap-6">
+    <header className={`nav-header ${scrollY > 1 && "shadow-lg"}`}>
+      <div className="nav-container md:flex">
+        <nav className="nav-links">
           <div>Abraço Sensível</div>
-          <ul className="flex items-center gap-6 font-semibold">
+          <ul className="list-links">
             {navLinks.map(({ name, url, inView }) => (
-              <li
-                className={`transition hover:text-[#7ed957] ${inView && "text-[#7ed957]"}`}
-              >
-                <a href={url}>{name}</a>
-
+              <li key={url} className="nav-link">
+                <a href={url} className={inView ? "active" : ""}>
+                  {name}
+                </a>
                 <div
-                  className={`h-[2px] transition-[width] ${
-                    !inView ? "w-0" : "w-full"
-                  } bg-[#7ed957]`}
+                  className={`nav-underline ${inView ? "visible" : "hidden"}`}
                 />
               </li>
             ))}
@@ -99,8 +67,8 @@ export const Nav = () => {
         </nav>
       </div>
 
-      <div className="mx-auto flex max-w-6xl items-center justify-between p-4 md:hidden">
-        <NavigationMenu className="flex md:hidden">
+      <div className="nav-container-mobile nav-mobile-menu ">
+        <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>

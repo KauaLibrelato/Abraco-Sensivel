@@ -1,0 +1,33 @@
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Equivale a max-w-6xl */
+  margin: 0 auto; /* mx-auto */
+  padding: 3rem 1.5rem; /* px-6 py-12 */
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* gap-6 */
+  max-width: 600px; /* max-w-[600px] */
+}
+
+.hero-description {
+  color: #1a202c; /* text-gray-900 */
+  font-size: 1rem; /* p1 (presumindo que seja um estilo de texto base) */
+}
+
+.hero-image {
+  max-height: 300px; /* max-h-[300px] */
+  display: none; /* hidden por padrão */
+}
+
+@media (min-width: 768px) {
+  /* lg:block */
+  .hero-image {
+    display: block;
+  }
+}
